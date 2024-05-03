@@ -1,5 +1,5 @@
 ## 217. Contains Duplicate
-🔗 Link: Contains Duplicate
+🔗 Link: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
 💡 Difficulty: Easy
 🛠️ Topics: Array, Sort, Hash
 
