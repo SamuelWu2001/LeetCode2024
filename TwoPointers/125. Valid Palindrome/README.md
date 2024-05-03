@@ -1,7 +1,7 @@
 ## 125. Valid Palindrome
-🔗 Link: [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)
-💡 Difficulty: Easy
-🛠️ Topics: Two Pointers, String
+🔗 Link: [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/)  
+💡 Difficulty: Easy  
+🛠️ Topics: Two Pointers, String  
 
 A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
