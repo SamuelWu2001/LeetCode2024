@@ -48,7 +48,8 @@ General Idea: Create a Set to store numbers. If the number is already in the Set
 3. Return False if we reach the end of the array
 
 ### Implement
-> - Implement the solution (make sure to know what level of detail the interviewer wants)
+> - Implement the solution (make sure to know what level of detail the interviewer wants)  
+
 see solution.cpp
 ### Review
 > - Re-check that your algorithm solves the problem by running through important examples.
@@ -56,3 +57,8 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
+1. Assume n represents the number of items in the array.
+   - Time complexity: O(nlog(n))
+   - Space complexity: O(n)
+2. Using an unordered_set, we can optimize the time complexity to O(n).
+
