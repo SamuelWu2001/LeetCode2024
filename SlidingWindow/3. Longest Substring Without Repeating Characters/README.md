@@ -34,19 +34,19 @@ s consists of English letters, digits, symbols and spaces
    Yes
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
-   We can start from sorting the given array, then check if there are consecutive items with the same value. If there are, we return True; otherwise, we reach the end of the array and return False.
-2. Sort the elements of the array in a HashMap or Set  
-   We traverse each element in the array and check them before storing in a Set. If the element isn't in the Set,  we add it. If we finish iterating through all elements without any duplicate, we return False. 
+1. Sliding Window  
+   We can create an unordered_set to record each unique element, while simultaneously setting up two pointers to represent the start and the end of the sliding window. Move the end pointer until a repeat character is found, and update both the start pointer and the window length. When the end pointer reaches the end of the input string, return the maximum value.
+  
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: Iterate  through the entire string and record the maximum length of the sliding window, while also checking whether there is repeating character in the sliding window.
+1. Create the unordered_set
+2. Initialize the sliding window at the first element
+3. Iterate through the string by moving the end pointer right
+   - if the character is repeated, update both the unordered_set and the start pointer
+   - update the maximum length
+4. Return the maximum length if we reach the end of the array
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
