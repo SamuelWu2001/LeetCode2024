@@ -1,6 +1,6 @@
 ## 217. Contains Duplicate
-🔗 Link: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)
-💡 Difficulty: Easy
+🔗 Link: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  
+💡 Difficulty: Easy  
 🛠️ Topics: Array, Sort, Hash
 
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
