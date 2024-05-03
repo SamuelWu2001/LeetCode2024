@@ -58,8 +58,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+1. Assume n represents the length of the input string and m represents the size of the unordered_set.
+   - Time complexity: O(n)
+   - Space complexity: O(min(n, m))
 
