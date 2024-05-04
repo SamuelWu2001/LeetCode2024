@@ -38,9 +38,9 @@ nums is sorted and rotated between 1 and n times.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Can the input be empty?
+1. Can the input be empty?  
    No
-2. Are all elements in the array unique?
+2. Are all elements in the array unique?  
    Yes
 3. Are all rotations clockwise?  
    Yes 
@@ -48,7 +48,7 @@ nums is sorted and rotated between 1 and n times.
    You must write an algorithm that runs in O(log n) time
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Binary Search
+1. Binary Search  
    Find out the middle element and through comparing it with the first or last element, we can eliminate the half of the array which does not contain the minimum element. This way, we can find the minimum
    element in O(log(n)) time.
 ### Plan
