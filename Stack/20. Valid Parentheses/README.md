@@ -46,6 +46,7 @@ s consists of parentheses only '()[]{}'.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
+
 General Idea: Create a stack to store open brackets and remove the elements when the corresponded close brackets are found. If the close bracket doesn't match or if the stack is not empty when we reach
 the end of the input string, return False; otherwise, return True.
 1. Create the Stack
