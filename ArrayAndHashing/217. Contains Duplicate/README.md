@@ -40,7 +40,7 @@ Constraints:
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.
+General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
 1. Create the Set
 2. Iterate through the array
    - check if the number is already in the Set
