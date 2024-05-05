@@ -48,8 +48,8 @@ nums is sorted and rotated between 1 and n times.
    You must write an algorithm that runs in O(log n) time
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Binary Search
-   Binary search is an efficient method for locating an element in a sorted list. Searching for an element naively can take O(N) time, but binary search can speed it up to O(log N). In this case, the array is sorted, so we can make use of binary search. However, since the array is rotated, we need to rethink the logic of binary search.
+1. Binary Search  
+   Binary search is an efficient method for locating an element in a sorted array. Searching for an element naively can take O(N) time, but binary search can speed it up to O(log N). In this case, the array is sorted, so we can make use of binary search. However, since the array is rotated, we need to rethink the elimination logic of binary search.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
