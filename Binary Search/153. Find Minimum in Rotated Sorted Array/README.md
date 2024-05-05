@@ -48,14 +48,14 @@ nums is sorted and rotated between 1 and n times.
    You must write an algorithm that runs in O(log n) time
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Binary Search  
-   Find out the middle element and through comparing it with the first or last element, we can eliminate the half of the array which does not contain the minimum element. This way, we can find the minimum
-   element in O(log(n)) time.
+1. Binary Search
+   Binary search is an efficient method for locating an element in a sorted list. Searching for an element naively can take O(N) time, but binary search can speed it up to O(log N). In this case, the array is sorted, so we can make use of binary search. However, since the array is rotated, we need to rethink the logic of binary search.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
-General Idea: Find the middle element and compare it with the last element of the array, if the middle one is larger, eliminate the first half; otherwise eliminate the second half. Repeat this process until
-we find the inflection point.
+
+General Idea: Find the middle element and compare it with the last element of the array, if the middle one is larger, eliminate the first half; otherwise eliminate the second half. Repeat this process until we find the inflection point.
+
 1. Find the middle element
 2. If the previous element is larger than the middle one, return the index of the middle element
 3. Compare the middle and last element
