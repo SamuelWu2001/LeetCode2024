@@ -35,12 +35,13 @@ s consists of English letters, digits, symbols and spaces
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 1. Sliding Window  
-   We can create an unordered_set to record each unique element, while simultaneously setting up two pointers to represent the start and the end of the sliding window. Move the end pointer until a repeat character is found, and update both the start pointer and the window length. When the end pointer reaches the end of the input string, return the maximum value.
+   We can set up two pointers to represent the start and the end of the sliding window. Move the end pointer until a repeat character is found and move the start pointer to remove the repeated charactor. Keep track of the maximum length of the window. When the end pointer reaches the end of the input string, return the maximum value.
   
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
-General Idea: Iterate  through the entire string and record the maximum length of the sliding window, while also checking whether there is repeating character in the sliding window.
+
+General Idea: Iterate  through the entire string and record the maximum length of the sliding window, while also checking whether there is repeated character in the sliding window.
 1. Create the unordered_set
 2. Initialize the sliding window at the first element
 3. Iterate through the string by moving the end pointer right
