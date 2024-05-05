@@ -70,11 +70,11 @@ see solution.cpp
 ### Review
 > - Re-check that your algorithm solves the problem by running through important examples.
 > - Go through it as if you are debugging it, assuming there is a bug.
+1. Be aware of the boundary when the length of the input array smaller than 3 or when the minumum element is the first element of the array. EX: [0], [1,0], [0,1,2,3,4,5]
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+1. Assume n represents the length of the input array.
+   - Time complexity: O(log(n))
+   - Space complexity: O(1)
 
