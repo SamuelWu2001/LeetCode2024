@@ -1,7 +1,7 @@
 ## 21. Merge Two Sorted Lists
-🔗 Link: [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)
-💡 Difficulty: Easy
-🛠️ Topics: Linked List, Recursion
+🔗 Link: [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/description/)  
+💡 Difficulty: Easy  
+🛠️ Topics: Linked List, Recursion  
 
 You are given the heads of two sorted linked lists list1 and list2.
 
