@@ -44,15 +44,15 @@ All elements of candidates are distinct.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Are `[2,2,3]` and `[2,3,2]` considered the same?
+1. Are `[2,2,3]` and `[2,3,2]` considered the same?  
    Yes
-2. Is the array of distinct integers candidates sorted?
+2. Is the array of distinct integers candidates sorted?  
    Yes
-3. Any requirement on time/space complexity?
+3. Any requirement on time/space complexity?  
    No
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Backtraking
+1. Backtraking  
    Backtracking algorithms can use pruning to quickly eliminate combinations that do not meet certain conditions, avoiding unnecessary computations.
 ### Plan
 > - Sketch visualizations and write pseudocode.
