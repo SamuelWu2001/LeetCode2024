@@ -62,8 +62,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+1. Assume n represents the length of `nums`.
+   - Time complexity: O(n). Since we iterate through the whole array for only one time
+   - Space complexity: O(n). Since the `dp` array has the same size as the `nums` array.
 
