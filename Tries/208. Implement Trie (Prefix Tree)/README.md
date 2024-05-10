@@ -1,6 +1,6 @@
 ## 208. Implement Trie (Prefix Tree)
 🔗 Link: [Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)  
-💡 Difficulty: Medium 
+💡 Difficulty: Medium  
 🛠️ Topics: Hash Table, String, Design, Trie  
 
 A trie (pronounced as "try") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings. There are various applications of this data structure, such as autocomplete and spellchecker.
@@ -49,8 +49,7 @@ At most 3 * 104 calls in total will be made to insert, search, and startsWith.
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 1. Prefix Tree - Trie  
-   The Trie structure allows to build it character by chracter, enabling efficient prefix-based searches. Since common prefixes are stored only once, a Trie can save space. The time complexity for searching
-   a specific string is O(m), where m represents the length of the string.
+   The Trie structure allows to be built character by character, enabling efficient prefix-based searches. Since common prefixes are stored only once, a Trie can save space. The time complexity for searching a specific string is O(m), where m represents the length of the string.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
@@ -67,8 +66,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+1. Assume n represents the length fo the searching/insert string.
+   All operations are done in O(n) time 
+   
 
