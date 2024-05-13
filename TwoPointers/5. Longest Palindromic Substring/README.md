@@ -31,9 +31,8 @@ s consist of only digits and English letters.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
 
-1. Are `A` and `a` considered the same characters?
+1. Are `A` and `a` considered the same characters?  
 No
-2. Any requirement on time/space complexity?
 
 ### Match
 
