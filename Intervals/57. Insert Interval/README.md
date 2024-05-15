@@ -39,15 +39,25 @@ newInterval.length == 2
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Any requirement on time/space complexity?  
+1. Does the newInterval only containsa set of start and end?  
+   Yes
+3. Any requirement on time/space complexity?  
+   You don't need to modify intervals in-place.
+
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Travere the interval array and find where the start and end if the insert interval located, either within an interval or in the space between two intervals. Finally, merge the overlapping
-intervals and output the result.
+General Idea: Add the `newInterval` into the `intervals` array and sort it again. Create a new array and traverse the `intervals` array to add the qualified elements into new array. 
+1. Add the `newInterval` into the `intervals` array and sort it again
+2. Create the `new` array
+3. Traverse the `intervals` array
+   - compare the `current` interval in the `intervals` array with the `last` interval in the `new` array
+   - if the start of the `current` interval is bigger the end of the `last` interval, add the `current` interval into `new` array
+   - Otherwise, if the end of the `current` interval is smaller or equal to the end of the `last` interval, continue to step3
+   - Otherwise, merge the `curren`t interval with the last interval by assigning the end of the `current` interval to the end of the `last` interval 
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -59,8 +69,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
+1. Assume n represents the number of intervals in the array.
    - Time complexity: O(nlog(n))
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
