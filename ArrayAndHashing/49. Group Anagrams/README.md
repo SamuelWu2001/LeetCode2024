@@ -74,5 +74,5 @@ see solution.cpp
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array and m represents the average lenghts of words.
    - Time complexity: O(mlog(m)*n^2)
-   - Space complexity: O(n)
+   - Space complexity: O(n*m)
 
