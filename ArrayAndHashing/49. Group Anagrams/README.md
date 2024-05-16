@@ -44,10 +44,8 @@ strs[i] consists of lowercase English letters.
 4. Any requirement on time/space complexity?  
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Hash map (unordered_map)
-   `unordered_map` is a container that provides a fast lookup mechanism and demonstrates good performance during insertion and deletion operations. In this case,
-   we can sort the strings to distinguish whether two words are anagrams. And then store them to the corresponding vector<string> by searching the `unordered_map`.
-   Since the time complexity of `unordered_sduring` during lookup is O(1), it is well-suited for this problem.
+1. Hash map (unordered_map)  
+   `unordered_map` is a container that provides a fast lookup mechanism and demonstrates good performance during insertion and deletion operations. In this case, we can sort the strings to distinguish whether two words are anagrams. And then store them to the corresponding vector<string> by searching the `unordered_map`. Since the time complexity of `unordered_sduring` during lookup is O(1), it is well-suited for this problem.
    
 ### Plan
 > - Sketch visualizations and write pseudocode.
@@ -58,8 +56,8 @@ Otherwise, create a new key-value pair to store it.
 1. Create an array of `unordered_map` called `hashmapList`
 2. Create an array of string to store anagrams called `anagramList`
 3. Iterate through the given array
-   - sort the given string and use it as a key to search the hashmapList`
-   - if the key already exists, add the string to the corresponding vector<string>
+   - Sort the given string and use it as a key to search the hashmapList`
+   - If the key already exists, add the string to the corresponding vector<string>
    - Otherwise, create a new key-value pair to store the string
 4. Traverse the entire `hashmapList` and add the value to the `anagramList`
 4. Return `anagramList`
