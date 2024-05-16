@@ -43,15 +43,15 @@ s consists of only uppercase English letters.
    O(n) in time and O(1) in space
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sliding Window
+1. Sliding Window  
    The sliding window algorithm can effectively solve problems requiring finding the specific length of a subsequence in an array or string, while satisfying certain constraints.
-2. Hash Table
+2. Hash Table  
    Using a hash map to keep track of the frequency of characters of the current window.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: 
+General Idea: Use sliding window to traverse the given string and at the same time  check maintain the current window to be valid. Use hash table to keep track of the characters in the current window.
 1. Create an unordered_map `mp` to record the frequency od characters in the sliding window.
 2. Initialize two pointers, left and right, to reoresents the star and the end of the sliding window.
 3. Declare variable `maxLength` and `maxChar` to represents the maximum length of the sliding window and the character that appears the most frequently respectively. 
