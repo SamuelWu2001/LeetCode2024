@@ -41,13 +41,13 @@ nums is an ascending array that is possibly rotated.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Are all values of nums are unique?
+1. Are all values of nums are unique?  
    Yes
-2. Any requirement on time/space complexity?
+2. Any requirement on time/space complexity?  
    O(log(n)) in time complexity
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Binary Search
+1. Binary Search  
    Binary search is an efficient method to search a target element in a sorted array. Searching for an element naively can take O(N) time, but binary search can speed it up
    to O(log N). In this case, the array is sorted, so we can make use of binary search. However, since the sorted array has been rotated, we need to rethink the elimination logic.
 ### Plan
