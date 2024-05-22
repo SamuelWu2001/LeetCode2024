@@ -74,7 +74,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the length of the given string.
-   - Time complexity: O(n^2)
+1. Assume n represents the length of the given string and m represents the number of elements in the given dictionary.
+   - Time complexity: O((m+n)*n^2)
    - Space complexity: O(n)
 
