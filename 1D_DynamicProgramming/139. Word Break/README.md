@@ -41,6 +41,7 @@ All the strings of wordDict are unique.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
 1. Any requirement on time/space complexity?
+   O(n^3) in time and O(n) in space.
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 1. Backtracking
@@ -54,11 +55,12 @@ All the strings of wordDict are unique.
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea:   
+General Idea: Create the dp array where dp[i] represents whether the substring from the first character to i-th character can be segmented by the words in the dictionary. Use the 
+formula `dp[i] = true when s[k+1:i] is in the dictionary and dp[k] is true where k < i` to complete the entire dp array.
 1. Create the dp array
 2. Iterate through the string (i)
    - Iterate through the dp array (k)
-     - if dp[k] is true and str[k,i] is in the dictionary, then dp[i] is true
+     - if dp[k] is true and str[k+1,i] is in the dictionary, then dp[i] is true
    - otherwise, dp[i] is false
 3. Return dp.back()
 
@@ -72,8 +74,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the length of the given array.
-   - Time complexity: O(nlog(n))
+1. Assume n represents the length of the given string.
+   - Time complexity: O(n^2)
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
