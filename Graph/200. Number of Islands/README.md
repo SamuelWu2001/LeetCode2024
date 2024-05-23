@@ -42,21 +42,21 @@ grid[i][j] is '0' or '1'.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Can the input grid be empty?
+1. Can the input grid be empty?  
    No
-2. Do diagonal connections between lands forms an island?
-   No
-3. Any requirement on time/space complexity?
-   O(m*n) in time and O(1) in space
+2. Do diagonal connections between lands forms an island?  
+   No 
+3. Any requirement on time/space complexity?  
+   O(m*n) in time and space
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. DFS
+1. DFS  
    The advantages of DFS are high space efficiency, faster solution finding in some cases and suitablility for memorization search. However, its limitations include the inability to find the shortest path and the potential for stack
    overflow in extreme cases.
 2. BFS  
    The advantages of BFS are that it can find the shortest path in an unwrighted graph, is suitable for iteration to avoid stack overflow issues, and discover all nodes. However, its limitations include high space requirements and, in
    some cases, lower efficiency compared to DFS
-3. Discussion
+3. Discussion  
    In this case, I prefer to use DFS methods to solve the problem since I think it is more intuitive to implement. However, if the 2d binary grid is extremely large, I will use BFS methods to avoid stack overflow issues.
 ### Plan
 > - Sketch visualizations and write pseudocode.
@@ -83,8 +83,8 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+1. Assume n represents the number of rows of the 2d binary grid.
+2. Assume m represents the number of columns of the 2d binary grid.
+   - Time complexity: O(m*n) => Since we will visit every grid for at most one time.
+   - Space complexity: O(m*n) => Since when the whole 2d grid is filled with lands (worst case), DFS will traverse every grid and the depth of the recursion stack will be m * n
 
