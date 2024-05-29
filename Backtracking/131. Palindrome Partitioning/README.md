@@ -72,3 +72,4 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 
+- Using a hashmap to store the results of evaluating substrings can prevent redundant calculations.
