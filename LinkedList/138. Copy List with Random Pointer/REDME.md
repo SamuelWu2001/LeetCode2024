@@ -46,26 +46,25 @@ Node.random is null or is pointing to some node in the linked list.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Can the head be null?
+1. Can the head be null?  
    Yes
-3. What is the maximum length of the given linked list?
-   1000
-4. What is the range of values that a node can hold?
+3. What is the maximum length of the given linked list?  
+   1000 
+4. What is the range of values that a node can hold?  
    -10000-10000  
-6. time / space complexity?
+6. time / space complexity?  
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Iterate (while loop)
+1. Iterate (while loop)  
    Since the random pointer of the original node may point to the node behind it, we should traverse every node first and build a new linked list without setting random pointers.
-2. Hash Table
+2. Hash Table  
    In order to make the random pointers point to the right place, we can use a hashmap to store the two nodes from the old and new linked lists which have the same index. And when we
    get the address where the original random pointer point, we can use the hashmap to find the corresponding address that the new random pointer should point to.      
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Travase through the entire linked list for one time, make the new linked list without setting random pointers and store the corresponding nodes into a hashmap. Go through 
-second time to set the random pointers based on the hashmap.
+General Idea: Travase through the entire linked list for one time, make the new linked list without setting random pointers and store the corresponding nodes into a hashmap. Go through second time to set the random pointers based on the hashmap.
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
