@@ -47,9 +47,8 @@ s and t consist of only lowercase English letters.
    O(n) in time
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sliding Window
-   We can travese both the string s and string t first and create a vector `distance` to store the distance of the corresponding two nodes. And use two indices to represents the range
-   of a sliding window. Go through `distance` and record the maximum length of the qualified sliding window.    
+1. Sliding Window  
+   We can travese both the string s and string t first and create a vector `distance` to store the distance of the corresponding two nodes. And use two indices to represents the range of a sliding window. Go through `distance` and record the maximum length of the qualified sliding window.    
 ## Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
