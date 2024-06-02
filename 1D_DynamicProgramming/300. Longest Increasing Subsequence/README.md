@@ -64,4 +64,9 @@ see solution.cpp
 1. Assume n represents the number of items in the array.
    - Time complexity: O(n^2)
    - Space complexity: O(n)
+2. Can you come up with an algorithm that runs in O(n log(n)) time complexity?
+   - traverse the entire string for 1 time => O(n) in time
+     - we need to find out the longest length while considering taking the current element
+   - Give the definition that `sorted` array is store all the sorted previous elements before current element
+   - use `lower_bound` function which finds the first index that is not smaller than the current value => O(log(n)) in time
 
