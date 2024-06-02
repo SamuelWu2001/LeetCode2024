@@ -42,19 +42,14 @@ Follow up: Can you come up with an algorithm that runs in O(n log(n)) time compl
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 1. Dynamic Programming  
-   Dynamic programming is a method for solving complex problems by breaking them down into smaller subproblems. In this case, we can define the dp array where dp[i] represent the
+   Dynamic programming is a method for solving complex problems by breaking them down into smaller subproblems. In this case, we can define the dp array where dp[i] represents the
    maximum length of the strictly increasing subsequence while considering taking the ith element. By defining subproblems in this way,  we can eventually solve the initial complex
    problems by returning the maximum value of the dp array.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: 
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: Create a `dp` array where dp[i] represents the maximum length of the strictly increasing subsequence while considering taking the ith element. And fill in other element of `dp` array by the formula: `dp[i] = max(maxVal, dp[j]+1), where j<i and nums[j]<nums[i]`. 
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -67,6 +62,6 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(n)
+   - Time complexity: O(n^2)
    - Space complexity: O(n)
 
