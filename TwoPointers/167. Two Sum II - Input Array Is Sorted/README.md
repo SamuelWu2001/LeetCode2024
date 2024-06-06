@@ -53,7 +53,7 @@ The tests are generated such that there is exactly one solution.
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
 1. Two pointers  
    I consider that initialize two pointers, `front` and `end`, to point to the start and end of the given array is a intuitive way since when the current sum of the tow pointers are bigger than the target value than we can move the `front` pointer to the right else we move the `end` pointer to the left instead. Keep doing above operations until the sum of the two pointers is the same as the target value. 
-### Planhttps://github.com/SamuelWu2001/LeetCode2024/blob/main/TwoPointers/167.%20Two%20Sum%20II%20-%20Input%20Array%20Is%20SortedREADME.md
+### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
