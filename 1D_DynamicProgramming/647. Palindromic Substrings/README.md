@@ -1,27 +1,32 @@
 ## 647. Palindromic Substrings
-🔗 Link: [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/)  
-💡 Difficulty: Easy  
-🛠️ Topics: Array, Sort, Hash  
+🔗 Link: [Palindromic Substrings](https://leetcode.com/problems/palindromic-substrings/description/)  
+💡 Difficulty: Medium  
+🛠️ Topics: Two Pointers, String, Dynamic Programming  
 
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given a string s, return the number of palindromic substrings in it.
+
+A string is a palindrome when it reads the same backward as forward.
+
+A substring is a contiguous sequence of characters within the string.
+
+ 
 
 Example 1:
 
-Input: nums = [1,2,3,1]
-Output: true
+Input: s = "abc"
+Output: 3
+Explanation: Three palindromic strings: "a", "b", "c".
 Example 2:
 
-Input: nums = [1,2,3,4]
-Output: false
-Example 3:
-
-Input: nums = [1,1,1,3,3,4,3,2,4,2]
-Output: true
+Input: s = "aaa"
+Output: 6
+Explanation: Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".
  
+
 Constraints:
 
-1 <= nums.length <= 105
--109 <= nums[i] <= 109
+1 <= s.length <= 1000
+s consists of lowercase English letters.
 
 ## UMPIRE Method:
 
@@ -29,25 +34,30 @@ Constraints:
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Any requirement on time/space complexity?
-2. Is the array sorted?
+1. Can the input string be empty?  
+   No
+3. Are the characters case sensitive? Are 'A' and 'a' considered to be the same?  
+   There are only lowercase English letters.
+4. Are the different (index) elements with the same value considered to be the same?  
+   No
+5. Any requirement on time/space complexity?  
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
-   We can start from sorting the given array, then check if there are consecutive items with the same value. If there are, we return True; otherwise, we reach the end of the array and return False.
-2. Sort the elements of the array in a HashMap or Set  
-   We traverse each element in the array and check them before storing in a Set. If the element isn't in the Set,  we add it. If we finish iterating through all elements without any duplicate, we return False. 
+1. Two pointers  
+   Two pointers is suitable for solving palindromic-related problems through checking characters outwards from the center. In this case, we can traverse the entire string and find out every qualified substring by two pointers and the time complexity should be O(n^2).
+2. Dynamic Programming  
+   We can also use dp methods to avoid repeated calculation for the reason that if `aba` is a palindrome than `xabax` will be a palindrome as well. In this case we can create a 2d dp array, where dp[i][j] represents whether substring[i,j] is a palindrome or not. By following the formuala : `dp[i][j] is true when dp[i+1][j-1] is true and s[i] == s[j]` we can fill in the whole 2d array and return the final answer. This method will also take O(n^2) in time complexity. 
+   
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
-
+General Idea: Use the two pointers method mentioned above
+1. Traverse the input string
+   - Consider the visited character to be the center one.
+   - Move the two pointers outward to find every qualified substring.
+   - If the previous character are the same as current visited character, use the two pointers to find out every qualified substring with even length.
+2. Return result
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
 
@@ -59,7 +69,5 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
-
+   - Time complexity: O(n^2)
+   - Space complexity: O(1)
