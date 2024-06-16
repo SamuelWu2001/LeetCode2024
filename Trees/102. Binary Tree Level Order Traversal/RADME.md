@@ -41,19 +41,33 @@ The number of nodes in the tree is in the range [0, 2000].
 3. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. BFS
+1. BFS  
    In this case, we can use BFS method to visit every nodes in the given tree by level and store all nodes in the same level into a vector element.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
 General Idea: Create two queues to store the nodes with the same level. When both of the queues are empty, this means we have go through the entire given tree.   
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
-
+1. Create two queues `a` and `b`, and push root node into `a`
+2. Set status = 0, current = {}, result = {}
+3. While loop
+   - if status == 0
+     - push child nodes of `a.front()` into `b`
+     - push a.front()->val into current
+     - pop `a.front()`
+   - if status == 1
+     - push child nodes of `b.front()` into `a`
+     - push b.front()->val into current
+     - pop `b.front()`
+   - if `status` == 0 and `a` is empty
+     - status = 1
+     - push `current` into `result`
+     - clean `current`
+   - if `status` == 1 and `b` is empty
+     - status = 0
+     - push `current` into `result`
+     - clean `current`
+ 4. return `result`
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
 
@@ -65,7 +79,6 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
+   - Time complexity: O(n)
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
