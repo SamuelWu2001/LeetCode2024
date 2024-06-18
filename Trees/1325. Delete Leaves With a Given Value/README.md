@@ -43,22 +43,25 @@ The number of nodes in the tree is in the range [1, 3000].
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Any requirement on time/space complexity?
-2. Is the array sorted?
+1. Can the root be null?  
+   No
+3. Do we need to remove the node which originally is not a leaf node but turn to be a leaf node while processing other nodes?  
+   Yew
+4. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. DFS
-   
+1. DFS  
+   In this case, the most intuitive way is to process the node from bottom to the top. And there is no difference in time complexity between DFS and BFS since either way we need to visit every node. I prefer to use DFS method and in each recursion stack we first porcess the left subtree and the right subtree. After that we can check if the current node is a leaf node. If it is and the value is equal to the target value, then we remove the current node. After processing entire tree, we can return the root node as the final answer.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: Same as the above section
+1. Recursion
+   - if `node->left` is not null, then call next recursion function
+   - if `node->right` is not null, then call next recursion function
+   - if both `node->left` and `node->right` are null and node->val is equal to the target value, return null
+   - else return `node`
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -70,8 +73,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
+1. Assume n represents the number of nodes in the given binary tree and m represents the deepest level of the tree.
+   - Time complexity: O(n)
+   - Space complexity: O(m)
