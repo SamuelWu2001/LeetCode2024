@@ -1,5 +1,5 @@
 ## 17. Letter Combinations of a Phone Number
-🔗 Link: [Letter Combinations of a Phone Number(https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)  
+🔗 Link: [Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/)  
 💡 Difficulty: Medium  
 🛠️ Topics: Hash Table, String, Backtracking
 
