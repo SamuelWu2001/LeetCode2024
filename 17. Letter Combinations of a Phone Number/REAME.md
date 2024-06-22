@@ -3,25 +3,32 @@
 💡 Difficulty: Medium  
 🛠️ Topics: Hash Table, String, Backtracking
 
-Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.
+
+A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.   
+![image](https://github.com/SamuelWu2001/LeetCode2024/assets/71746159/bd81e378-884c-4567-aa40-f80d3a89cd33)
 
 Example 1:
 
-Input: nums = [1,2,3,1]
-Output: true
+Input: digits = "23"
+Output: ["ad","ae","af","bd","be","bf","cd","ce","cf"]
+
 Example 2:
 
-Input: nums = [1,2,3,4]
-Output: false
+Input: digits = ""
+Output: []
+
 Example 3:
 
-Input: nums = [1,1,1,3,3,4,3,2,4,2]
-Output: true
+Input: digits = "2"
+Output: ["a","b","c"]
  
+
 Constraints:
 
-1 <= nums.length <= 105
--109 <= nums[i] <= 109
+0 <= digits.length <= 4
+digits[i] is a digit in the range ['2', '9'].
+
 
 ## UMPIRE Method:
 
@@ -29,24 +36,22 @@ Constraints:
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Any requirement on time/space complexity?
-2. Is the array sorted?
+1. Can the given string be empty?
+   Yes, and you should return empty vector
+3. Will the string `digits` contain the duplicated letter?
+   No
+4. What is the longest length of the given string?
+   4
+6. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
-   We can start from sorting the given array, then check if there are consecutive items with the same value. If there are, we return True; otherwise, we reach the end of the array and return False.
-2. Sort the elements of the array in a HashMap or Set  
-   We traverse each element in the array and check them before storing in a Set. If the element isn't in the Set,  we add it. If we finish iterating through all elements without any duplicate, we return False. 
+1. Backtracking
+   In this case since the maximum length is only 4, I believe using backtracking method will be an appropriate method to find out all possible combinations.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: 
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -58,8 +63,7 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
+1. Assume n represents the length of the given string.
+   - Time complexity: O(4^n)
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
