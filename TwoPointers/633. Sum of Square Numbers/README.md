@@ -5,8 +5,6 @@
 
 Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
- 
-
 Example 1:
 
 Input: c = 5
@@ -31,18 +29,18 @@ Constraints:
 1. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Two Pointers
-   
+1. Two Pointers  
+   Use two pointer to point at 0 and root(c) in the begining. Move the two pointers inward to find out the qualified combination.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+1. Initialize two pointers `a` = 0 and `b` = root(c); 
+2. While a+1 < b
+   - if a*a + b\*b = c, return True
+   - if a*a + b\*b < c, a++
+   - if a*a + b\*b > c, b--
+3. Return False
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -55,7 +53,6 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+   - Time complexity: O(n)
+   - Space complexity: O(1)
 
