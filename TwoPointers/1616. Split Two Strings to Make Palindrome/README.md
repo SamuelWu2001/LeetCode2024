@@ -52,20 +52,19 @@ a and b consist of lowercase English letters
 1. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
-   We can start from sorting the given array, then check if there are consecutive items with the same value. If there are, we return True; otherwise, we reach the end of the array and return False.
-2. Sort the elements of the array in a HashMap or Set  
-   We traverse each element in the array and check them before storing in a Set. If the element isn't in the Set,  we add it. If we finish iterating through all elements without any duplicate, we return False. 
+1. Two Pointers  
+   We can use two pointers point to the start and the end of the string and move inwards to check if the string is a palindrome.
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: First move the two pinters inwards until the elements pointed by the two pointers are different. Then check the lefting part of the two strings if one of them are palindrome. If true, return true, otherwise return false.
+1. Create two pointers `l` and `r` and points to the the start of string a and the end of string b respectively  
+2. Move the two pointers inward until the elements are different
+3. Check if one of the remaining part of string a and string b is palindrome
+   - if true, return True
+   - else change the role of string a and string b and continue on step 2
+5. Return False 
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -78,7 +77,6 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
+   - Time complexity: O(n)
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
