@@ -1,5 +1,5 @@
 ## 1657. Determine if Two Strings Are Close
-🔗 Link: ［Determine if Two Strings Are Close］(https://leetcode.com/problems/contains-duplicate/)  
+🔗 Link: [Determine if Two Strings Are Close](https://leetcode.com/problems/contains-duplicate/)  
 💡 Difficulty: Easy  
 🛠️ Topics: Array, Sort, Hash  
 
