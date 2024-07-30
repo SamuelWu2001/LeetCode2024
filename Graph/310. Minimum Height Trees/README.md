@@ -44,9 +44,11 @@ The given input is guaranteed to be a tree and there will be no repeated edges.
 > - Ask clarifying questions and use examples to understand what the interviewer wants out of this problem.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
-1. Is the edges array sorted?
+1. Is the edges array sorted?  
    No, it is random
-3. Any requirement on time/space complexity?
+2. Can the edges vector be empty?  
+   Yes, when there is only one node in the tree.
+4. Any requirement on time/space complexity?  
    O(n) in time complexity
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
