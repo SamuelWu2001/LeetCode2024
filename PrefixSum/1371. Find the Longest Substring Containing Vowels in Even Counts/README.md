@@ -36,23 +36,15 @@ s contains only lowercase English letters.
 > - Choose a “happy path” test input, different than the one provided, and a few edge case inputs.
 > - Verify that you and the interviewer are aligned on the expected inputs and outputs.
 1. Any requirement on time/space complexity?
-2. Is the array sorted?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
-   We can start from sorting the given array, then check if there are consecutive items with the same value. If there are, we return True; otherwise, we reach the end of the array and return False.
-2. Sort the elements of the array in a HashMap or Set  
-   We traverse each element in the array and check them before storing in a Set. If the element isn't in the Set,  we add it. If we finish iterating through all elements without any duplicate, we return False. 
+1. Prefix Sum  
+   We can use a integer to represents the status. And once we find out that there are two index wwith the same status, we can know that the subsequence between them is qualified.  
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: Create a integer to record the status and use an unordered_map to store the status and its corresponding first index. If we encounter the vowel character, update the status and the map. And update the length for every character. 
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -65,7 +57,6 @@ see solution.cpp
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
 1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+   - Time complexity: O(n)
+   - Space complexity: O(1)
 
