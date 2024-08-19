@@ -32,17 +32,13 @@ Constraints:
 1. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
+1. Dynamic Programming  
+   In this case if we check every number in increasing order, the runtime will be exteremely long since the ugly number is sparse. Thus, we should think about finding the ugly number by multiply 2,3 and 5. The question is how do we know the next smallest ugly number. As we all know, the new ugly number must be an old ugly number times 2 or 3 or 5. In this case,  we can simply compare the three candidates and find the smallest one to be the next ugly number. And we also need to be aware of the duplicated number, for example, 2\*3 and 3*2 are considered the same ugly number.    
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: same as above section
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -54,8 +50,6 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
+   - Time complexity: O(n)
    - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
 
