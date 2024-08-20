@@ -39,17 +39,21 @@ Constraints:
 1. Any requirement on time/space complexity?
 ### Match
 > - See if this problem matches a problem category (e.g. Strings/Arrays) and strategies or patterns within the category.
-1. Sort  
+1. Dynamic Programming  
+   In this case if we want to get the minimum operations then we should find the maximum value m where n%m == 0. And the ans(n) will be ans(m) + n/m. Since we need to copy one time and paste for n/m-1 times. And in order to get m, we can use a factor started from 2 and check if n%factor == 0, if true then m = n/factor, else increase factor and keep findigng m.   
 ### Plan
 > - Sketch visualizations and write pseudocode.
 > - Walk through a high-level implementation with an existing diagram.
 
-General Idea: Create a Set to store numbers. If the number is already in the Set, return True. Otherwise we reach the end of the array and return False.  
-1. Create the Set
-2. Iterate through the array
-   - check if the number is already in the Set
-   - add the number into the Set
-3. Return False if we reach the end of the array
+General Idea: Same as above  
+1. `factor = 2`, `steps = 1` 
+2. while n > 1
+   - if n%factor == 0
+    - steps += factor
+    - n /= factor
+   - else
+    - ++factor
+3. return steps
 
 ### Implement
 > - Implement the solution (make sure to know what level of detail the interviewer wants)  
@@ -61,8 +65,6 @@ see solution.cpp
 ### Evaluate
 > - Finish by giving space and run-time complexity.
 > - Discuss any pros and cons of the solution.
-1. Assume n represents the number of items in the array.
-   - Time complexity: O(nlog(n))
-   - Space complexity: O(n)
-2. Using an unordered_set, we can optimize the time complexity to O(n).
+   - Time complexity: O(n)
+   - Space complexity: O(1)
 
